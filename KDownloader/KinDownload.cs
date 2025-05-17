@@ -27,7 +27,8 @@
             1. input_url (ссылка на видео, например: https://kinescope.io/a6239f75-a36a-4cf6-90c7-df314a99ac27)
             2. output_file name (имя выходного файла, например: d:\SuperVideo\1.2_Камушки.mp4)
             3. referrer (рефер ссылка на сайт где встроено видео, например: https://my.hudozhnik)
-            4. quality (необязательно качество видео, по умолчанию Quality.best, например: Quality.best. Варианты: Quality.best/Quality.normal/Quality.low)
+            4. quality (необязательно качество видео, по умолчанию Quality.best, например: Quality.best. 
+                    Варианты: Quality.best/Quality.normal/Quality.low)
 
                 VideoDownloader videoDownloader = new(inputURL, outputFile, referrer, quality);
 
@@ -53,14 +54,20 @@
                 5 - Рашифровка аудиофайла
                 6 - Объединение видео и аудиофалов
                 7 - Завершение работы
-            Для третьего случая, если message содержит текст "PARTS" то в code находиться колличество частей для скачивания,
-            если message пустой, то в code находиться информация какая часть была скачана.
+            Для третьего случая, если message содержит текст "PARTS" то в code находиться колличество 
+            частей для скачивания, если message пустой, то в code находиться информация какая часть была скачана.
             
                 
     Шаг 4.
             Запускаем загрузку видео с помощью метода Start()
 
                 videoDownloader.Start();
+
+    Шаг 5.
+            Выполнить команду Dispose() для освобождения ресурсов и удаления временных файлов.
+                
+                videoDownloader.Dispose();
+
 
     Дополнительно можно использовать метод GetVideoResolutions() для получения доступных разрешений видеофайла.
     ( например: List<int> videoResolutions = videoDownloader.GetVideoResolutions(); )
@@ -75,7 +82,11 @@ ________________________________________________________________________________
     VideoDownloader.SetToolsPath(@"D:\Utils");
 
     // Создаем объект VideoDownloader с параметрами:
-    VideoDownloader videoDownloader = new(@"https://kinescope.io/a6239f75-a36a-4cf6-90c7-df314a99ac27", @"d:\SuperVideo\Камушки.mp4", @"https://my.hudozhnik.online//", Quality.low);
+    VideoDownloader videoDownloader = new(
+        @"https://kinescope.io/a6239f75-a36a-4cf6-90c7-df314a99ac27", 
+        @"d:\SuperVideo\Камушки.mp4", 
+        @"https://my.hudozhnik.online//", 
+        Quality.low);
 
     // Подписываемся на событие OnBackMessage, чтобы получать сообщения о процессе загрузки видео и аудио файлов.
     videoDownloader.OnBackMessage += (typeMessage, message, code) =>  
@@ -101,6 +112,9 @@ ________________________________________________________________________________
 
     // Запускаем загрузку видео
     videoDownloader.Start();
+
+    // Освобождаем ресурсы и удаляем временные файлы
+    videoDownloader.Dispose(); 
 
 
 ____________________________________________________________________________________________________________
@@ -289,7 +303,6 @@ namespace KDownloader
             {
                 try
                 {
-                    // throw new Exception();
                     XmlDocument xmldoc = new XmlDocument();
                     xmldoc.Load(kinescope_video!.GetMpdMasterPlaylistUrl());
 
