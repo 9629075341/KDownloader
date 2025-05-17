@@ -1,5 +1,4 @@
-# KDownloader
-    БИБЛИОТЕКА СКАЧИВАНИЕ ВИДЕО С KINESCOPE.IO 
+#   БИБЛИОТЕКА СКАЧИВАНИЕ ВИДЕО С KINESCOPE.IO 
     _____________________________________________________________________________________________________________
     KinescopeDownloader - это порт библиотеки на Python kinescope-dl (https://github.com/anijackich/kinescope-dl) 
     библиотека для загрузки видео с Kinescope.io, которая использует MPD (MPEG-DASH) для потоковой передачи видео 
