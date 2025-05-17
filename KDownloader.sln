@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36109.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KDownloader", "KDownloader\KDownloader.csproj", "{9DB54660-8FE2-439D-9FBE-DE62687F220B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestKDown", "TestKDown\TestKDown.csproj", "{EC35AECA-F62E-4DFF-811E-C81020AC9AFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9DB54660-8FE2-439D-9FBE-DE62687F220B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DB54660-8FE2-439D-9FBE-DE62687F220B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DB54660-8FE2-439D-9FBE-DE62687F220B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DB54660-8FE2-439D-9FBE-DE62687F220B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC35AECA-F62E-4DFF-811E-C81020AC9AFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC35AECA-F62E-4DFF-811E-C81020AC9AFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC35AECA-F62E-4DFF-811E-C81020AC9AFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC35AECA-F62E-4DFF-811E-C81020AC9AFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B59D2D9-A966-4664-90C8-3D763E2ABBE8}
+	EndGlobalSection
+EndGlobal
